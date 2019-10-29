@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--    过滤器的简单使用 abs取绝对值-->
+{#    <p>位置的绝对值是 {{ position|abs }}</p>#}
+{#    <p>个性签名： {{ sign|default('此人很懒', boolean=True)}}</p>#}
+    <p>个性签名： {{ sign or '此人很懒'}}</p>    {#    or 也可以实现类似过滤器  #}
+
+{# 如果你想使用类似于`python`中判断一个值是否为False
+{#（例如：None、空字符串、空列表、空字典等），
+{#那么就必须要传递另外一个参数`{{ value|default('默认值',boolean=True) }}`。   #}
+
+     <p>{{ alert}}</p>
+    <p>{{ time|handle_time }}</p>
+{#    {% autoescape off %}#}
+{#        <p>{{ alert|escape}}</p>#}
+{#    {% endautoescape %}#}
+
+
+
+</body>
+</html>
